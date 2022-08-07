@@ -15,8 +15,13 @@ const UsuarioSchema = Schema({
         type: String,
         required: [true, 'La contraseña es obligatoria'],
     },
+    nif: {
+        type: String,
+        required: [true, 'Número NIF/NIE es obligatorio'],
+    },
     img: {
         type: String,
+        
     },
     rol: {
         type: String,
