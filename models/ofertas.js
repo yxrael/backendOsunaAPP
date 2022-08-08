@@ -1,6 +1,6 @@
 const { Schema, model } = require('mongoose');
 
-const ProductoSchema = Schema({
+const OfertaShema = Schema({
     nombre: {
         type: String,
         required: [true, 'El nombre es obligatorio'],
@@ -20,9 +20,9 @@ const ProductoSchema = Schema({
         type: Number,
         default: 0
     },
-    categoria: {
+    negocio: {
         type: Schema.Types.ObjectId,
-        ref: 'Categoria',
+        ref: 'Negocio',
         required: true
     },
     descripcion: { type: String },
@@ -31,10 +31,10 @@ const ProductoSchema = Schema({
 });
 
 
-ProductoSchema.methods.toJSON = function() {
+OfertaShema.methods.toJSON = function() {
     const { __v, estado, ...data  } = this.toObject();
     return data;
 }
 
 
-module.exports = model( 'Producto', ProductoSchema );
+module.exports = model( 'Oferta', OfertaShema );
