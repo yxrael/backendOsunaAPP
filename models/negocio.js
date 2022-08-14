@@ -27,8 +27,8 @@ const NegocioShema = Schema({
     },
     descripcion: { type: String },
     direccion: { type: String },
-    latitude: { type: String },
-    longitude: { type: String },
+    latitude: { type: Number },
+    longitude: { type: Number },
     disponible: { type: Boolean, defult: true },
     img: { type: String },
 });
